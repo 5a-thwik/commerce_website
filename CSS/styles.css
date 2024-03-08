@@ -1271,7 +1271,7 @@ nav li.has-child:hover .mega {
 
 
 .products.one .item{
-  flex-direction: row;
+  flex-direction: column
 }
 
 .products.one .price .discount {
@@ -1303,15 +1303,18 @@ nav li.has-child:hover .mega {
 }
 .products.one .thumbnail-show{
   position: relative;
+  width:130px;
+  height: 110px;
   overflow: hidden;
   margin: 0 2em 2em 0;
+
 }
 
 /*
 Responsive Media Queries
 */
 
-@media screen and (min-width: 533px) {
+@media screen and (min-width: 481px) {
   .products.main .item {
     flex: 0 0 50%;
   }
@@ -1330,7 +1333,7 @@ Responsive Media Queries
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
   }
