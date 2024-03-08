@@ -90,8 +90,8 @@ const dptButton = document.querrySelector('.dpt-cat .dpt-trigger'),
   loop: true,
   autoHeight: true,
   navigation:{
-    nexEl: '.Swiper-button-next',
-    preEl: '.Swiper-button-prev',
+    nextEl: '.Swiper-button-next',
+    prevEl: '.Swiper-button-prev',
   },
 thumbs: {
   swiper: productThumb
