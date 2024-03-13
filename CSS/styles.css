@@ -1309,7 +1309,7 @@ nav li.has-child:hover .mega {
   margin: 0 2em 2em 0;
 
 }
-.products :is(.swiper-button-next , .swiper-button-prev){
+.products :is(.swiper-button-next, .swiper-button-prev){
   outline: 0;
   color: var(--secondary-dark-color);
   transition: var(--trans-background-color), transfrom .3s;
@@ -1320,14 +1320,14 @@ nav li.has-child:hover .mega {
 .products .big-image:hover .swiper-button-prev{
   transform:translateX(-10px);
 }
-.products :is(.swiper-button-next , .swiper-button-prev)::after{
+.products :is(.swiper-button-next, .swiper-button-prev)::after{
   font: size 1.5em;
 }
-.products .big-image:hover :is(.swiper-button-next , .swiper-button-prev)::after{
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev)::after{
   background-color: var(--light-bg-color);
 }
 
-.products .one .available {
+.products.one .available {
   font-size: var(--font-small);
   font-weight: var(--fw5);
   padding: 0.5em;
@@ -1336,26 +1336,27 @@ nav li.has-child:hover .mega {
   color: #10ac84;
   background-color: var(--light-bg-color);
 }
-.products .one .add-review{
+.products.one .add-review {
   color:var(--dark-color);
 }
-.products .one .price{
+.products.one .price {
   display: flex;
   gap: 1em;
+  align-items: center;
   flex-wrap: wrap;
 }
-.products .one .price .current{
+.products.one .price .current{
   font-size: 2.5em;
 }
-.products .variant form{
+.products .variant form {
   display: flex;
   margin-top: 0.5em;
 }
-.products .variant form p{
-  position: relative;
-  margin: 0 0.5em o.5em;
+.products .variant form P {
+  position: relative; 
+  margin: 0 0.5em 0.5em;
 }
-.products :where(.variant , .actions) .circle{
+.products :where(.variant, .actions) .circle {
   display: block;
   position: static;
   top: 0;
@@ -1363,7 +1364,7 @@ nav li.has-child:hover .mega {
   cursor: pointer;
   z-index: 1;
 }
-.products .variant input{
+.products .variant input {
   clip: rect(0,0,0,0);
   overflow:hidden;
   position: absolute;
@@ -1373,7 +1374,7 @@ nav li.has-child:hover .mega {
 .products .variant label::before {
   opacity: 1;
 }
-.products .variant label[ for="cogrey"]::before {
+.products .variant label[for="cogrey"]::before {
   background-color: #576574;
 }
 .products .variant label[for="coblue"]::before {
@@ -1382,7 +1383,7 @@ nav li.has-child:hover .mega {
 .products .variant label[for="cogreen"]::before {
   background-color: #0b4e33; 
 }
-.single-product .variant form p input:checked + label{
+.single-product .variant form p input:checked + label {
   background-color: transparent;
   border: 2px solid var(--dark-color);
   color: var(--white-color);
@@ -1390,7 +1391,7 @@ nav li.has-child:hover .mega {
 
 
 
-.products .sizes .variant label::before{
+.products .sizes .variant label::before {
   background-color: var(--white-color);
 }
 .products .sizes .variant label span {
@@ -1404,7 +1405,7 @@ nav li.has-child:hover .mega {
   align-items: center;
   justify-content: center;
 }
-.single-product .sizes .variant form p input:checked + label::before{
+.single-product .sizes .variant form p input:checked + label::before {
   background-color: var(--dark-color);
   opacity: 1;
 }
@@ -1419,27 +1420,27 @@ nav li.has-child:hover .mega {
   border:1px solid var(--border-color);
   margin: 0 2em 2em 0;
 }
-.products .action :where(input, button){
+.products .action :where(input, button) {
   font-size:1.25em;
-  outline:0;
+  outline: 0;
   border: 0;
 }
 .products .action input {
   width:50px;
   text-align: center;
 }
-.products .qty-control button::before{
+.products .qty-control button::before {
   background-color: transparent;
 }
 .products .action .button-cart{
 flex: 1;
 min-width: 200px;
 }
-.products .action .button-cart button{
+.products .action .button-cart button {
   width:var(--percent100);
   cursor: pointer;
 }
-.wish-share a{
+.wish-share a {
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -1449,7 +1450,7 @@ min-width: 200px;
 }
 
 
-.products .collapse .has-child > a{
+.products .collapse .has-child > a {
   position: relative;
   font-weight: var(--fw7);
   text-transform: uppercase;
@@ -1458,7 +1459,7 @@ min-width: 200px;
   gap: 1em;
   align-items:flex-start ;
 }
-.products .collapse .has-child > a::before{
+.products .collapse .has-child > a::before {
   content: '+';
   position: relative;
   left: 0;
@@ -1495,6 +1496,8 @@ min-width: 200px;
   content: '-';
 }
  
+
+
 
 .products .reviews h4 {
   font-size: 2em;
@@ -1548,9 +1551,52 @@ min-width: 200px;
 }
 
 
+.review-form .rating {
+  flex-wrap: wrap;
+}
+.review-form p {
+  font-size: 1.25em;
+  margin-right: 1em;
+}
+.review-form .rate-this input {
+  display: none;
+}
+.review-form .rate-this label {
+  float: right;
+  font-size: 2em;
+  color: var(--secondary-dark-color);
+}
 
-
-
+.rate-this > input:checked ~ label,
+.rate-this:not(:checked) > label:hover,
+.rate-this:not(:checked) > label:hover ~ label {
+  color: #f1c40e;
+}
+.rate-this > input:checked + label:hover,
+.rate-this > input:checked ~ label:hover,
+.rate-this > label:hover ~ input:checked ~ label,
+.rate-this > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}
+.review-form form {
+  margin-bottom: 2.5em;
+}
+form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+form :where(input, textarea) {
+  line-height: 1;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  outline: 0;
+}
+form label {
+  font-weight: var(--fw5);
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
 
 
 
@@ -1596,6 +1642,11 @@ Responsive Media Queries
   .products.one .row{
     flex: 0 0 50%;
     width: 50%;
+  }
+  .products.one .is_sticky,
+  .is_sticky {
+    position: static;
+    top: 2em;
   }
 }
 
@@ -1821,4 +1872,8 @@ Responsive Media Queries
   #page.showdpt .dpt-menu{
     display: block;
   }
+ .products.one .flexwrap > .row:last-child > .item {
+  padding-left: 2em;
+ }
+
 }
